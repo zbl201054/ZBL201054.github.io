@@ -1,26 +1,114 @@
 <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8">
-<link rel="icon" href="favicon.ico">
-<title>萝卜工作室 radishstudio</title>
-<style>
-    h1{font-size:80px}
-    h4{font-size:40px}
-</style>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萝卜工作室</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- 添加 favicon -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 10; /* 确保导航在顶部 */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            padding: 0; /* 去掉内边距 */
+            margin: 0;  /* 去掉外边距 */
+            text-align: center;
+            min-height: 100vh; /* 使每个部分高度至少为视口高度 */
+            background: linear-gradient(to right, #ffeb3b, #80deea); /* 统一的背景颜色 */
+            display: flex; /* 使内容居中 */
+            flex-direction: column;
+            justify-content: center; /* 使内容垂直居中 */
+            align-items: center; /* 使内容水平居中 */
+        }
+        .hero {
+            height: 100vh; /* 首页占满整个视口 */
+            background: linear-gradient(to right, #ffeb3b, #80deea); /* 首页颜色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 60px; /* 增大标题1的字体大小 */
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 36px; /* 增大标题2的字体大小 */
+            margin: 20px 0;
+        }
+    </style>
 </head>
-<body background="img\bg.png">
-    <h1 align="center">欢迎来到萝卜工作室的主页!</h1>
-    <h4 align="center">welcome to radishstudio!</h4>
-    <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=112977655171089&bvid=BV1D3pZecE4C&cid=500001652817353&p=1" width="100%" height="720" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-    <div>
-        <font size="10">萝卜工作室是一个主研编程猫kitten4和Python的工作室<br></font>
-    <font size="10">欢迎加入我们<br></font>
-    <font size="10">我们有方块跑酷等作品<br></font>
-    <a href="https://shequ.codemao.cn/work/197978002">查看方块跑酷</a>
-    </div>
-    <p>我们的联系方式</p>
-    <p>email:radishstudio2024@outlook.com</p>
-    <p>qq群号：1002555824</p>
-    <p>欢迎加入我们</p>
+<body>
+
+<nav>
+    <a href="#hero">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#services">服务领域</a>
+    <a href="#timeline">发展历程</a>
+    <a href="#game">方块跑酷</a>
+    <a href="#values">我们的价值观</a>
+    <a href="#contact">联系我们</a>
+</nav>
+
+<section id="hero" class="hero">
+    <h1>欢迎来到萝卜工作室</h1>
+    <p>我们专注于制作优良的游戏。</p>
+    <button onclick="location.href='#about'">了解更多</button>
+</section>
+
+<section id="about">
+    <h2>我们是谁</h2>
+    <p>我们创立于2024年7月，我们是一个专注于编程猫kitten以及Python的工作室，专注于制作各类游戏及工具。</p>
+</section>
+
+<section id="services">
+    <h2>服务领域</h2>
+    <p>我们专注于制作优良的游戏，并提供服务。</p>
+</section>
+
+<section id="timeline">
+    <h2>发展历程</h2>
+    <p>2020: 工作室正式立项</p>
+    <p>2021: 工作室正式发行第一个产品</p>
+    <p>2022-2023: 方块跑酷正式达到1w浏览量，进入新作啾啾看</p>
+    <p>2024: 工作室正式入驻编程猫</p>
+</section>
+
+<section id="game">
+    <h2>方块跑酷</h2>
+    <p>一个跑酷类游戏，目前已开发超过2年，修改过2次架构，拥有多种功能。</p>
+    <p>网页版：<a href="https://shequ.codemao.cn/work/197978002" target="_blank">访问链接</a></p>
+    <p>exe打包版本：<a href="https://www.123pan.com/s/RLKSjv-GchPh.html" target="_blank">访问链接</a> (提取码: YVAW)</p>
+</section>
+
+<section id="values">
+    <h2>我们的价值观</h2>
+    <p>我们追求卓越，并始终努力提供卓越的服务。</p>
+    <p>我们认真对待每一个玩家和使用者的反馈，以作出最好的改进。</p>
+</section>
+
+<section id="contact">
+    <h2>联系我们</h2>
+    <p><strong>电子邮件：</strong> radishstudio2024@outlook.com</p>
+    <p><strong>QQ群：</strong> 1002555824</p>
+</section>
+
 </body>
+</html>
